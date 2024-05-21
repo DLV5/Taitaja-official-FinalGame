@@ -43,21 +43,21 @@ public class BackgroundBlur : MonoBehaviour
 
     private void OnGameStateChangedEventHandelr(GameState state)
     {
-        switch (state)
-        {
-            case GameState.Playing:
-                Unblur();
-                break;
-            case GameState.Paused:
-                Blur();
-                break;
-            case GameState.Win:
-                Blur();
-                break;
-            case GameState.Lost:
-                Blur();
-                break;
-        }
+        //switch (state)
+        //{
+        //    case GameState.Playing:
+        //        Unblur();
+        //        break;
+        //    case GameState.Paused:
+        //        Blur();
+        //        break;
+        //    case GameState.Win:
+        //        Blur();
+        //        break;
+        //    case GameState.Lost:
+        //        Blur();
+        //        break;
+        //}
     }
 
     private bool IsReachedTargetValue() => _targetBlurValue == _blurEffect.focusDistance.value;
