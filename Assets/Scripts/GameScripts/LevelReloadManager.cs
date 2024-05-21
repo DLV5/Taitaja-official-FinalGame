@@ -10,6 +10,8 @@ public class LevelReloadManager : MonoBehaviour
 
     [SerializeField] private Image Background;
 
+    private int _scienceCounter = 0;
+
     private void Start()
     {
         UpdateADayForTheFirstTime();
@@ -31,7 +33,10 @@ public class LevelReloadManager : MonoBehaviour
             return;
         }
 
-        Debug.LogWarning("New week started");
+        if (CurrentCandidate.Trait == Trait.Positive)
+        {
+            _scienceCounter++;
+        }
 
         //Get candidates
         _electionScreen.GetNewCandidates();
