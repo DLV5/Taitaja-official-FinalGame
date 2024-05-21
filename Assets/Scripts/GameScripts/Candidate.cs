@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 
-public class Candidate : MonoBehaviour
+[Serializable]
+public class Candidate
 {
     [field :SerializeField] public string Name {  get; set; }
     [field :SerializeField] public string Description {  get; set; }
