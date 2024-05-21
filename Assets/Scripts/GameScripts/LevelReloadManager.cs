@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class LevelReloadManager : MonoBehaviour
 {
@@ -9,8 +10,11 @@ public class LevelReloadManager : MonoBehaviour
     [SerializeField] private NewsScreen _newsScreen;
 
     [SerializeField] private GameObject _closedUntilNextTurnScreen;
+    [SerializeField] private GameObject _reminderScreen;
 
-    [SerializeField] private Image Background;
+    [SerializeField] private Image _background;
+
+    [SerializeField] private TurnCounter _counter;
 
     private void Start()
     {
@@ -25,17 +29,22 @@ public class LevelReloadManager : MonoBehaviour
         _electionScreen.GetNewCandidates();
 
         _closedUntilNextTurnScreen.SetActive(false);
+        _counter.AddTurn();
     }
 
     public void UpdateADay()
     {
         if (CurrentCandidate == null)
         {
+            _reminderScreen.SetActive(true);
+
             Debug.LogWarning("You didn't select a candidate");
             return;
         }
 
         _closedUntilNextTurnScreen.SetActive(false);
+
+        _counter.AddTurn();
 
         _electionScreen.GetNewCandidates();
         //Show news from the previous day
@@ -47,6 +56,6 @@ public class LevelReloadManager : MonoBehaviour
 
     private void UpdateBackground()
     {
-        Background.sprite = CurrentCandidate.RelatedBackGround;
+        _background.sprite = CurrentCandidate.RelatedBackGround;
     }
 }
