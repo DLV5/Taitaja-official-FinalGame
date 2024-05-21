@@ -1398,7 +1398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -34.505}
+  m_AnchoredPosition: {x: 0, y: -34.505005}
   m_SizeDelta: {x: 0, y: 69.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &482202824
@@ -3067,7 +3067,7 @@ MonoBehaviour:
   slippageStrength: 0
   slippageInterval: 0
   slippageScrollSpeed: 0
-  slippageSize: 1
+  slippageSize: 10
   chromaticAberrationStrength: 0.001
   isChromaticAberration: 1
   isMultipleGhost: 0
