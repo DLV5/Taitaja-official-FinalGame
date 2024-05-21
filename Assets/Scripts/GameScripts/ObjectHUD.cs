@@ -10,16 +10,10 @@ public class ObjectHUD : MonoBehaviour
 
     private bool _wasObjectHealed = false;
 
-    private void OnEnable()
-    {
-        Health.OnHealthChanged += SetHealth;
-    }
-
     private void Update()
     {
         if (Mathf.Abs(_healthSlider.value - _easeHealthSlider.value) < 0.001f)
         {
-            Debug.Log("Object was healed");
             _wasObjectHealed = false;
             return;
         }
@@ -33,11 +27,6 @@ public class ObjectHUD : MonoBehaviour
         }
     }
 
-    private void OnDisable()
-    {
-        Health.OnHealthChanged -= SetHealth;
-    }
-
     public void SetHUD(int maxHealth, int currentHealth)
     {
         _healthSlider.maxValue = maxHealth;
@@ -47,13 +36,13 @@ public class ObjectHUD : MonoBehaviour
         _easeHealthSlider.value = currentHealth;
     }
 
-    public void SetHealth(int health)
+    public void SetValue(int value)
     {
-        if(_healthSlider.value > health)
-            _healthSlider.value = health;
+        if(_healthSlider.value > value)
+            _healthSlider.value = value;
         else
         {
-            _easeHealthSlider.value = health;
+            _easeHealthSlider.value = value;
             _wasObjectHealed = true;
         }
     }

@@ -13,6 +13,9 @@ public class ElectionScreen : MonoBehaviour
         [field: SerializeField] public TMP_Text Name { get; set; }
         [field: SerializeField] public TMP_Text Description { get; set; }
         [field: SerializeField] public TMP_Text Promise { get; set; }
+        [field: SerializeField] public TMP_Text HungerStat { get; set; }
+        [field: SerializeField] public TMP_Text WaterStat { get; set; }
+        [field: SerializeField] public TMP_Text HealthStat { get; set; }
         [field: SerializeField] public Button VoteButton { get; set; }
     }
 
@@ -49,7 +52,7 @@ public class ElectionScreen : MonoBehaviour
 
         _candidatesDataCopy.Candidates.Remove(firstCandidate);
 
-        var secondCandidate = _candidatesDataCopy.Candidates.Where(candidate => candidate.Trait != firstCandidate.Trait).FirstOrDefault();
+        var secondCandidate = _candidatesDataCopy.Candidates[UnityEngine.Random.Range(0, _candidatesDataCopy.Candidates.Count)];
 
         _candidatesDataCopy.Candidates.Remove(secondCandidate);
 
@@ -65,6 +68,42 @@ public class ElectionScreen : MonoBehaviour
         candidateUI.Name.text = candidate.Name;
         candidateUI.Description.text = candidate.Description;
         candidateUI.Promise.text = candidate.Promise;
+
+        candidateUI.HungerStat.text = "Hunger";
+        candidateUI.WaterStat.text = "Water";
+        candidateUI.HealthStat.text = "Health";
+
+        for (int i = 0; i < Math.Abs(candidate.HungerAffectionLevel); i++)
+        {
+            if(candidate.HungerAffectionLevel > 0)
+            {
+                candidateUI.HungerStat.text += "+";
+            } else if(candidate.HungerAffectionLevel < 0)
+            {
+                candidateUI.HungerStat.text += "-";
+            }
+        }
+        
+        for (int i = 0; i < Math.Abs(candidate.WaterAffectionLevel); i++)
+        {
+            if(candidate.WaterAffectionLevel > 0)
+            {
+                candidateUI.WaterStat.text += "+";
+            } else if(candidate.WaterAffectionLevel < 0)
+            {
+                candidateUI.WaterStat.text += "-";
+            }
+        
+        }for (int i = 0; i < Math.Abs(candidate.HealthAffectionLevel); i++)
+        {
+            if(candidate.HealthAffectionLevel > 0)
+            {
+                candidateUI.HealthStat.text += "+";
+            } else if(candidate.HealthAffectionLevel < 0)
+            {
+                candidateUI.HealthStat.text += "-";
+            }
+        }
         candidateUI.VoteButton.onClick.AddListener(delegate { ChooseCandidate(candidate); });
     }
 

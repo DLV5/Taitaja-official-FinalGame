@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Stats {
+public class Stats : MonoBehaviour {
     private int _maxHunger = 10;
     private int _hunger = 10;
     public int Hunger { get => _hunger; set {
@@ -11,6 +11,8 @@ public class Stats {
             {
                 _hunger = value;
             }
+
+            _hungerBar.SetValue(_hunger);
         }
     }
     
@@ -24,6 +26,8 @@ public class Stats {
             {
                 _water = value;
             }
+
+            _waterBar.SetValue(_water);
         }
     }
     
@@ -37,6 +41,19 @@ public class Stats {
             {
                 _health = value;
             }
+
+            _healthBar.SetValue(_health);
         }
+    }
+
+    [SerializeField] private ObjectHUD _hungerBar;
+    [SerializeField] private ObjectHUD _waterBar;
+    [SerializeField] private ObjectHUD _healthBar;
+
+    private void Start()
+    {
+        _hungerBar.SetHUD(_maxHunger, _hunger);
+        _waterBar.SetHUD(_maxWater, _water);
+        _healthBar.SetHUD(_maxHealth, _health);
     }
 }

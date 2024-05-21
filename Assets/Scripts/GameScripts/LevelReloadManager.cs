@@ -7,10 +7,9 @@ public class LevelReloadManager : MonoBehaviour
 
     [SerializeField] private ElectionScreen _electionScreen;
     [SerializeField] private NewsScreen _newsScreen;
+    [SerializeField] private Stats _stats;
 
     [SerializeField] private Image Background;
-
-    private int _scienceCounter = 0;
 
     private void Start()
     {
@@ -33,12 +32,10 @@ public class LevelReloadManager : MonoBehaviour
             return;
         }
 
-        if (CurrentCandidate.Trait == Trait.Positive)
-        {
-            _scienceCounter++;
-        }
-
-        //Get candidates
+        _stats.Hunger += CurrentCandidate.HungerAffectionLevel;
+        _stats.Water += CurrentCandidate.WaterAffectionLevel;
+        _stats.Health += CurrentCandidate.HealthAffectionLevel;
+        
         _electionScreen.GetNewCandidates();
         //Show news from the previous day
         _newsScreen.UpdateNews(CurrentCandidate);

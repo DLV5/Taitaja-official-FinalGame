@@ -12,7 +12,6 @@ public class NewsScreen : MonoBehaviour
         [field: SerializeField] public Image Photo { get; set; }
         [field: SerializeField] public string Name { get; set; }
         [field: SerializeField] public string CommentaryText { get; set; }
-        [field: SerializeField] public Trait PositiveOrNegative { get; set; }
     }
 
     [SerializeField] private Image _photo;

@@ -11,7 +11,9 @@ public class Candidate
     [field :SerializeField] public string RelatedNews {  get; set; }
     [field :SerializeField] public Sprite RelatedBackGround {  get; set; }
 
-    [field :SerializeField] public Sprite Image {  get; set; }
+    [field :SerializeField] public int HungerAffectionLevel {  get; set; }
+    [field :SerializeField] public int WaterAffectionLevel {  get; set; }
+    [field :SerializeField] public int HealthAffectionLevel {  get; set; }
 
-    [field :SerializeField] public Trait Trait {  get; set; }
+    [field :SerializeField] public Sprite Image {  get; set; }
 }

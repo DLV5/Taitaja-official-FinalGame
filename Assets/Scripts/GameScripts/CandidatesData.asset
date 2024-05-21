@@ -19,27 +19,35 @@ MonoBehaviour:
     <RelatedNews>k__BackingField: He decided to take a food from females and give
       it to males
     <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: 1
+    <WaterAffectionLevel>k__BackingField: 1
+    <HealthAffectionLevel>k__BackingField: 1
     <Image>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-    <Trait>k__BackingField: 1
   - <Name>k__BackingField: Kellie Kirk
     <Description>k__BackingField: Buisness woman, that cares about people
     <Promise>k__BackingField: I will finally solve the float problem in this district
     <RelatedNews>k__BackingField: Children are able to walk to the school again
     <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: -2
+    <WaterAffectionLevel>k__BackingField: 2
+    <HealthAffectionLevel>k__BackingField: 1
     <Image>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-    <Trait>k__BackingField: 0
   - <Name>k__BackingField: Sam Odonell
     <Description>k__BackingField: A clerich from the church
     <Promise>k__BackingField: As a religious person, I will manage all studies by
       myself
     <RelatedNews>k__BackingField: Bible replaces all the books in a study programm
     <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: 3
+    <WaterAffectionLevel>k__BackingField: -1
+    <HealthAffectionLevel>k__BackingField: -1
     <Image>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-    <Trait>k__BackingField: 1
   - <Name>k__BackingField: Terry Chang
     <Description>k__BackingField: Just a scientist
     <Promise>k__BackingField: Science should be available for everyone
     <RelatedNews>k__BackingField: He actually just lecturing students?
     <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: 3
+    <WaterAffectionLevel>k__BackingField: 3
+    <HealthAffectionLevel>k__BackingField: -3
     <Image>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-    <Trait>k__BackingField: 0
