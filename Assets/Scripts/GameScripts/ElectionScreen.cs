@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +25,9 @@ public class ElectionScreen : MonoBehaviour
 
     [SerializeField] private LevelReloadManager _manager;
 
+    [SerializeField] private Stats _stats;
+    [SerializeField] private GameObject _closedScreen;
+
     private CandidatesData _candidatesDataCopy;
 
     private void Awake()
@@ -50,11 +52,7 @@ public class ElectionScreen : MonoBehaviour
 
         var firstCandidate = _candidatesDataCopy.Candidates[UnityEngine.Random.Range(0, _candidatesDataCopy.Candidates.Count)];
 
-        _candidatesDataCopy.Candidates.Remove(firstCandidate);
-
         var secondCandidate = _candidatesDataCopy.Candidates[UnityEngine.Random.Range(0, _candidatesDataCopy.Candidates.Count)];
-
-        _candidatesDataCopy.Candidates.Remove(secondCandidate);
 
         UpdateCandidate(_firstCandidateUI, firstCandidate);
         UpdateCandidate(_secondCandidateUI, secondCandidate);
@@ -110,5 +108,13 @@ public class ElectionScreen : MonoBehaviour
     private void ChooseCandidate(Candidate candidate)
     {
         _manager.CurrentCandidate = candidate;
+
+        _stats.Hunger += candidate.HungerAffectionLevel;
+        _stats.Water += candidate.WaterAffectionLevel;
+        _stats.Health += candidate.HealthAffectionLevel;
+
+        _closedScreen.SetActive(true);
+
+        gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
     }
 }

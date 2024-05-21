@@ -7,7 +7,8 @@ public class LevelReloadManager : MonoBehaviour
 
     [SerializeField] private ElectionScreen _electionScreen;
     [SerializeField] private NewsScreen _newsScreen;
-    [SerializeField] private Stats _stats;
+
+    [SerializeField] private GameObject _closedUntilNextTurnScreen;
 
     [SerializeField] private Image Background;
 
@@ -22,6 +23,8 @@ public class LevelReloadManager : MonoBehaviour
 
         //Get candidates
         _electionScreen.GetNewCandidates();
+
+        _closedUntilNextTurnScreen.SetActive(false);
     }
 
     public void UpdateADay()
@@ -32,10 +35,8 @@ public class LevelReloadManager : MonoBehaviour
             return;
         }
 
-        _stats.Hunger += CurrentCandidate.HungerAffectionLevel;
-        _stats.Water += CurrentCandidate.WaterAffectionLevel;
-        _stats.Health += CurrentCandidate.HealthAffectionLevel;
-        
+        _closedUntilNextTurnScreen.SetActive(false);
+
         _electionScreen.GetNewCandidates();
         //Show news from the previous day
         _newsScreen.UpdateNews(CurrentCandidate);
