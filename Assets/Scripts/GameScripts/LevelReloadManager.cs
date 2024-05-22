@@ -16,6 +16,8 @@ public class LevelReloadManager : MonoBehaviour
 
     [SerializeField] private TurnCounter _counter;
 
+    [SerializeField] private MoneyManager _moneyManager;
+
     private void Start()
     {
         UpdateADayForTheFirstTime();
@@ -40,6 +42,12 @@ public class LevelReloadManager : MonoBehaviour
 
             Debug.LogWarning("You didn't select a candidate");
             return;
+        }
+
+        //First turn when money can be unlocked
+        if(_counter.CurrentTurn > 5)
+        {
+            _moneyManager.AddMoney();
         }
 
         _closedUntilNextTurnScreen.SetActive(false);

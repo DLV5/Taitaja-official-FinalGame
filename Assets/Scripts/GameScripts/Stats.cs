@@ -1,8 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 public class Stats : MonoBehaviour {
     private int _maxHunger = 10;
-    private int _hunger = 10;
+    private int _hunger = 5;
     public int Hunger { get => _hunger; set {
             if (value > _maxHunger)
             {
@@ -13,11 +14,16 @@ public class Stats : MonoBehaviour {
             }
 
             _hungerBar.SetValue(_hunger);
+
+            if(_hunger <= 0)
+            {
+                StartCoroutine(LoseAGameAfterDelay());
+            }
         }
     }
     
     private int _maxWater = 10;
-    private int _water = 10;
+    private int _water = 5;
     public int Water { get => _water; set {
             if (value > _maxWater)
             {
@@ -28,11 +34,16 @@ public class Stats : MonoBehaviour {
             }
 
             _waterBar.SetValue(_water);
+
+            if (_water <= 0)
+            {
+                StartCoroutine(LoseAGameAfterDelay());
+            }
         }
     }
     
     private int _maxHealth = 10;
-    private int _health = 10;
+    private int _health = 5;
     public int Health { get => _health; set {
             if (value > _maxHealth)
             {
@@ -43,6 +54,11 @@ public class Stats : MonoBehaviour {
             }
 
             _healthBar.SetValue(_health);
+
+            if (_health <= 0)
+            {
+                StartCoroutine(LoseAGameAfterDelay());
+            }
         }
     }
 
@@ -55,5 +71,11 @@ public class Stats : MonoBehaviour {
         _hungerBar.SetHUD(_maxHunger, _hunger);
         _waterBar.SetHUD(_maxWater, _water);
         _healthBar.SetHUD(_maxHealth, _health);
+    }
+
+    private IEnumerator LoseAGameAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(.3f);
+        GameManager.Instance.ChangeGameState(GameState.Lost);
     }
 }

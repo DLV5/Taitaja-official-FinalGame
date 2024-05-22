@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,14 @@ public class ElectionScreen : MonoBehaviour
     [SerializeField] private Stats _stats;
     [SerializeField] private GameObject _closedScreen;
 
+    [SerializeField] private GameObject _legendsIcon;
+    [SerializeField] private GameObject _notificationScreen;
+
+    [SerializeField] private GameObject _exitInternetButton;
+
+    [SerializeField] private TurnCounter _counter;
+    [SerializeField] private int _numberOfTurnToAppear = 5;
+
     private CandidatesData _candidatesDataCopy;
 
     private void Awake()
@@ -52,10 +61,19 @@ public class ElectionScreen : MonoBehaviour
 
         var firstCandidate = _candidatesDataCopy.Candidates[UnityEngine.Random.Range(0, _candidatesDataCopy.Candidates.Count)];
 
-        var secondCandidate = _candidatesDataCopy.Candidates[UnityEngine.Random.Range(0, _candidatesDataCopy.Candidates.Count)];
+        var noEqualsList = _candidatesDataCopy.
+            Candidates.Where(candidate => candidate.Name != firstCandidate.Name)
+            .ToList();
+        var secondCandidate = noEqualsList[UnityEngine.Random.Range(0, noEqualsList.Count)];
 
         UpdateCandidate(_firstCandidateUI, firstCandidate);
         UpdateCandidate(_secondCandidateUI, secondCandidate);
+
+        if(_counter.CurrentTurn == _numberOfTurnToAppear)
+        {
+            _notificationScreen.SetActive(true);
+            _legendsIcon.SetActive(true);
+        }
 
         //return new List<Candidate> { firstCandidate, secondCandidate };
     }
@@ -115,6 +133,8 @@ public class ElectionScreen : MonoBehaviour
 
         _closedScreen.SetActive(true);
 
+        gameObject.SetActive(false);
+        _exitInternetButton.SetActive(true);
         gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
     }
 }
