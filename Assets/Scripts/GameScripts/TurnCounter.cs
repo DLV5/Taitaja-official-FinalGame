@@ -9,6 +9,8 @@ public class TurnCounter : MonoBehaviour
 
     private int _maxAmountOfTurns = 20;
 
+    [SerializeField] private CivilizationObjectsSpawner _civilizationSpawner;
+
     private int _currentTurn = 0;
 
     public int CurrentTurn {  get => _currentTurn; }
@@ -19,6 +21,7 @@ public class TurnCounter : MonoBehaviour
 
         _turnUI.text = $"{_currentTurn}/{_maxAmountOfTurns}";
         _turnUIOnNewTurn.text = $"{_currentTurn}/{_maxAmountOfTurns}";
+        _civilizationSpawner.SpawnNextObject();
 
         if(_currentTurn > 1)
             _newTurnUI.StartNewTurnAnimation();
