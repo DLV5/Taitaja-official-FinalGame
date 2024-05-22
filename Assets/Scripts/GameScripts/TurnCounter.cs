@@ -22,6 +22,7 @@ public class TurnCounter : MonoBehaviour
 
         _turnUI.text = $"{_currentTurn}/{_maxAmountOfTurns}";
         _turnUIOnNewTurn.text = $"{_currentTurn}/{_maxAmountOfTurns}";
+        _civilizationSpawner.SpawnNextObject();
 
         StartCoroutine(SpawnWithDelay());
 
