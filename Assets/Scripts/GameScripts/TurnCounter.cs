@@ -13,5 +13,10 @@ public class TurnCounter : MonoBehaviour
     {
         _currentTurn++;
         _turnUI.text = $"{_currentTurn}/{_maxAmountOfTurns}";
+
+        if(_currentTurn == _maxAmountOfTurns)
+        {
+            GameManager.Instance.ChangeGameState(GameState.Win);
+        }
     }
 }

@@ -7213,8 +7213,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 6738206111018910991, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -3.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738206111018910991, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -34.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738206111018910991, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.4599915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738206111018910991, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -20.42102
+      value: -14.84
       objectReference: {fileID: 0}
     - target: {fileID: 7300151609034121028, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
       propertyPath: m_IsActive
@@ -7317,6 +7329,8 @@ PrefabInstance:
     - {fileID: 7300151609034121028, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
     - {fileID: 2461078540556580136, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
     - {fileID: 4195777092002653883, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
+    - {fileID: 4210271627793232472, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
+    - {fileID: 3097989884583242239, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 522161018575211636, guid: 8cce7fa7d8d5d5846be5931d49053473, type: 3}
       insertIndex: 1
@@ -9950,7 +9964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turnUI: {fileID: 1560817543}
-  _maxAmountOfTurns: 30
+  _maxAmountOfTurns: 5
 --- !u!1 &1593010255
 GameObject:
   m_ObjectHideFlags: 0
