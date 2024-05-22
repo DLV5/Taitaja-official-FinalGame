@@ -89,11 +89,6 @@ public class ElectionScreen : MonoBehaviour
         candidateUI.WaterStat.text = "Water";
         candidateUI.HealthStat.text = "Health";
 
-        Debug.Log("Hunger " + candidate.HungerAffectionLevel);
-        Debug.Log("Water " + candidate.WaterAffectionLevel);
-        Debug.Log("Health " + candidate.HealthAffectionLevel);
-        Debug.Log("--------------");
-
         for (int i = 0; i < Math.Abs(candidate.HungerAffectionLevel); i++)
         {
             if(candidate.HungerAffectionLevel > 0)
@@ -125,6 +120,8 @@ public class ElectionScreen : MonoBehaviour
                 candidateUI.HealthStat.text += "-";
             }
         }
+
+        candidateUI.VoteButton.onClick.RemoveAllListeners();
         candidateUI.VoteButton.onClick.AddListener(delegate { ChooseCandidate(candidate); });
     }
 
