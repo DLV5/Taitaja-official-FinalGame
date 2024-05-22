@@ -5,7 +5,7 @@ public class TurnCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text _turnUI;
 
-    [SerializeField] private int _maxAmountOfTurns = 30;
+    private int _maxAmountOfTurns = 2;
 
     private int _currentTurn = 0;
 
@@ -18,6 +18,7 @@ public class TurnCounter : MonoBehaviour
 
         if(_currentTurn == _maxAmountOfTurns)
         {
+            Debug.Log("Game should end");
             GameManager.Instance.ChangeGameState(GameState.Win);
         }
     }

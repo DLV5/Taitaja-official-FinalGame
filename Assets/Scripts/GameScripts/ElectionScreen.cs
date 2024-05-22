@@ -35,7 +35,7 @@ public class ElectionScreen : MonoBehaviour
     [SerializeField] private GameObject _exitInternetButton;
 
     [SerializeField] private TurnCounter _counter;
-    private int _numberOfTurnToAppear = 3;
+    private int _numberOfTurnToAppear = 10;
 
     private CandidatesData _candidatesDataCopy;
 
