@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioObjects:
   - audioName: MainMenuBackground
-    audioClip: {fileID: 8300000, guid: 5d3aef3298650ee4283d93a60b6d0046, type: 3}
+    audioClip: {fileID: 8300000, guid: fba3ac9a55d579748a53c6cde25012e0, type: 3}
   - audioName: GameBackground
     audioClip: {fileID: 8300000, guid: 75ffc6c15bf140544993bb1e92db8bdf, type: 3}
+  - audioName: MouseClick
+    audioClip: {fileID: 8300000, guid: 08d54b1c9ca70214ca4c36bcc582edd2, type: 3}

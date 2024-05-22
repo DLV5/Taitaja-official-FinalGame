@@ -11,4 +11,11 @@ public class PlayerController : MonoBehaviour
             GameManager.Instance.CurrentState == GameState.Paused ? GameState.Playing : GameState.Paused;
         GameManager.Instance.ChangeGameState(stateToChange);
     }
+    
+    public void MouseClick(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+
+        AudioManager.Instance.PlaySFX("MouseClick");
+    }
 }
