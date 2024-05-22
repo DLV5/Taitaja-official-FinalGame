@@ -13,6 +13,7 @@ public class RealWorldStickman : MonoBehaviour, ISpawnObject
         Animator = GetComponentInChildren<Animator>();
         if (Animator == null)
             Debug.LogError("No animator");
+        Animator.
     }
     public void Activate()
     {
