@@ -5,7 +5,7 @@ public class TurnCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text _turnUI;
 
-    private int _maxAmountOfTurns = 2;
+    private int _maxAmountOfTurns = 20;
 
     private int _currentTurn = 0;
 

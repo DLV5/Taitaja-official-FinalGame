@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416d6461827fa41a4f3a30e63f6ca8, type: 3}
   m_Name: AudioData
   m_EditorClassIdentifier: 
-  AudioObjects: []
+  AudioObjects:
+  - audioName: MainMenuBackground
+    audioClip: {fileID: 8300000, guid: 5d3aef3298650ee4283d93a60b6d0046, type: 3}
+  - audioName: GameBackground
+    audioClip: {fileID: 8300000, guid: 75ffc6c15bf140544993bb1e92db8bdf, type: 3}
