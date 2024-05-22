@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +15,7 @@ public class CivilizationObjectsSpawner : MonoBehaviour
     public void SpawnNextObject()
     {
         GameObject obj = _spawnQueue.Dequeue();
-        obj.SetActive(true);
+        if (obj != null)
+            obj.SetActive(true);
     }
 }
