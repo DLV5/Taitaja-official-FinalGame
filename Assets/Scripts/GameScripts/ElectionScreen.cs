@@ -35,7 +35,7 @@ public class ElectionScreen : MonoBehaviour
     [SerializeField] private GameObject _exitInternetButton;
 
     [SerializeField] private TurnCounter _counter;
-    [SerializeField] private int _numberOfTurnToAppear = 5;
+    private int _numberOfTurnToAppear = 3;
 
     private CandidatesData _candidatesDataCopy;
 
@@ -88,6 +88,11 @@ public class ElectionScreen : MonoBehaviour
         candidateUI.HungerStat.text = "Hunger";
         candidateUI.WaterStat.text = "Water";
         candidateUI.HealthStat.text = "Health";
+
+        Debug.Log("Hunger " + candidate.HungerAffectionLevel);
+        Debug.Log("Water " + candidate.WaterAffectionLevel);
+        Debug.Log("Health " + candidate.HealthAffectionLevel);
+        Debug.Log("--------------");
 
         for (int i = 0; i < Math.Abs(candidate.HungerAffectionLevel); i++)
         {
