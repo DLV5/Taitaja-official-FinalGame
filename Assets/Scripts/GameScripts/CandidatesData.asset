@@ -30,7 +30,7 @@ MonoBehaviour:
       effect around here
     <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
     <HungerAffectionLevel>k__BackingField: -1
-    <WaterAffectionLevel>k__BackingField: -1
+    <WaterAffectionLevel>k__BackingField: 2
     <HealthAffectionLevel>k__BackingField: 3
     <Image>k__BackingField: {fileID: 21300000, guid: 3043c30301cf86d499d5b1080e4f3de4, type: 3}
   - <Name>k__BackingField: Sam Odonell
