@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,7 +53,9 @@ public class ElectionScreen : MonoBehaviour
 
         var firstCandidate = _candidatesDataCopy.Candidates[UnityEngine.Random.Range(0, _candidatesDataCopy.Candidates.Count)];
 
-        var secondCandidate = _candidatesDataCopy.Candidates[UnityEngine.Random.Range(0, _candidatesDataCopy.Candidates.Count)];
+        var secondCandidate = _candidatesDataCopy.
+            Candidates.Where(candidate => candidate.Name != firstCandidate.Name)
+            .ToList()[UnityEngine.Random.Range(0, _candidatesDataCopy.Candidates.Count)];
 
         UpdateCandidate(_firstCandidateUI, firstCandidate);
         UpdateCandidate(_secondCandidateUI, secondCandidate);
