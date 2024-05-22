@@ -3,22 +3,24 @@ using UnityEngine;
 
 public class CinemachineShake : MonoBehaviour
 {
-    private CinemachineVirtualCamera _cinemachineVirtualCamera;
+    [SerializeField] private float _intensivity;
+    [SerializeField] private float _time;
     private float shakeTimer;
+    private CinemachineVirtualCamera _cinemachineVirtualCamera;
 
     private void Awake()
     {
         _cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
     }
 
-    public void ShakeCamera(float intensivity, float time)
+    public void ShakeCamera()
     {
         var _cinemachineBasicMultiChannelPerlin = _cinemachineVirtualCamera
             .GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         
-        _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensivity;
+        _cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = _intensivity;
 
-        shakeTimer = time;
+        shakeTimer = _time;
     }
 
     private void Update()

@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b416d6461827fa41a4f3a30e63f6ca8, type: 3}
   m_Name: AudioData
   m_EditorClassIdentifier: 
-  AudioObjects: []
+  AudioObjects:
+  - audioName: MainMenuBackground
+    audioClip: {fileID: 8300000, guid: fba3ac9a55d579748a53c6cde25012e0, type: 3}
+  - audioName: GameBackground
+    audioClip: {fileID: 8300000, guid: 75ffc6c15bf140544993bb1e92db8bdf, type: 3}
+  - audioName: MouseClick
+    audioClip: {fileID: 8300000, guid: f0e5fd66b5712ae48a1e27b97b99e15f, type: 3}
+  - audioName: ChoosedSound
+    audioClip: {fileID: 8300000, guid: 04a61755b0313994dbe8a2ada76c3d55, type: 3}
+  - audioName: NewDaySound
+    audioClip: {fileID: 8300000, guid: 9f47f757ce239704a9f79506fb8a555d, type: 3}

@@ -35,7 +35,7 @@ public class ElectionScreen : MonoBehaviour
     [SerializeField] private GameObject _exitInternetButton;
 
     [SerializeField] private TurnCounter _counter;
-    [SerializeField] private int _numberOfTurnToAppear = 5;
+    private int _numberOfTurnToAppear = 10;
 
     private CandidatesData _candidatesDataCopy;
 
@@ -120,11 +120,15 @@ public class ElectionScreen : MonoBehaviour
                 candidateUI.HealthStat.text += "-";
             }
         }
+
+        candidateUI.VoteButton.onClick.RemoveAllListeners();
         candidateUI.VoteButton.onClick.AddListener(delegate { ChooseCandidate(candidate); });
     }
 
     private void ChooseCandidate(Candidate candidate)
     {
+        AudioManager.Instance.PlaySFX("ChoosedSound");
+
         _manager.CurrentCandidate = candidate;
 
         _stats.Hunger += candidate.HungerAffectionLevel;

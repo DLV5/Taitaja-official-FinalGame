@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class LevelReloadManager : MonoBehaviour
 {
@@ -45,7 +44,7 @@ public class LevelReloadManager : MonoBehaviour
         }
 
         //First turn when money can be unlocked
-        if(_counter.CurrentTurn > 5)
+        if(_counter.CurrentTurn > 10)
         {
             _moneyManager.AddMoney();
         }

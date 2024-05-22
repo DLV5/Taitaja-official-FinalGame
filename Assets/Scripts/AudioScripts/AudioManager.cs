@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
@@ -47,6 +48,27 @@ public class AudioManager : MonoBehaviour
             if (_audios.ContainsKey(remake))
                 continue;
             _audios.Add(remake, obj.audioClip);
+        }
+
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            PlayMusic("MainMenuBackground");
+        }
+        else
+        {
+            PlayMusic("GameBackground");
+        }
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            PlayMusic("MainMenuBackground");
+        }
+        else
+        {
+            PlayMusic("GameBackground");
         }
     }
 
