@@ -18,4 +18,8 @@ MonoBehaviour:
   - audioName: GameBackground
     audioClip: {fileID: 8300000, guid: 75ffc6c15bf140544993bb1e92db8bdf, type: 3}
   - audioName: MouseClick
-    audioClip: {fileID: 8300000, guid: 08d54b1c9ca70214ca4c36bcc582edd2, type: 3}
+    audioClip: {fileID: 8300000, guid: f0e5fd66b5712ae48a1e27b97b99e15f, type: 3}
+  - audioName: ChoosedSound
+    audioClip: {fileID: 8300000, guid: 04a61755b0313994dbe8a2ada76c3d55, type: 3}
+  - audioName: NewDaySound
+    audioClip: {fileID: 8300000, guid: 9f47f757ce239704a9f79506fb8a555d, type: 3}

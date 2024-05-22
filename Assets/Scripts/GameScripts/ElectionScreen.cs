@@ -127,6 +127,8 @@ public class ElectionScreen : MonoBehaviour
 
     private void ChooseCandidate(Candidate candidate)
     {
+        AudioManager.Instance.PlaySFX("ChoosedSound");
+
         _manager.CurrentCandidate = candidate;
 
         _stats.Hunger += candidate.HungerAffectionLevel;
