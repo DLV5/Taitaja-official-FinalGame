@@ -14,40 +14,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Candidates>k__BackingField:
   - <Name>k__BackingField: Bobby Johns
-    <Description>k__BackingField: Yound candidate, with a big ambitions
-    <Promise>k__BackingField: I will solve a hunger problem, only for males...
-    <RelatedNews>k__BackingField: He decided to take a food from females and give
-      it to males
+    <Description>k__BackingField: Yound hunter
+    <Promise>k__BackingField: He knows how to hunt?
+    <RelatedNews>k__BackingField: He saw a bear and went to a bare fight with it,
+      he won.
     <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-    <HungerAffectionLevel>k__BackingField: 1
-    <WaterAffectionLevel>k__BackingField: 1
-    <HealthAffectionLevel>k__BackingField: 1
-    <Image>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: 4
+    <WaterAffectionLevel>k__BackingField: -1
+    <HealthAffectionLevel>k__BackingField: -2
+    <Image>k__BackingField: {fileID: 21300000, guid: 370cfd1c05b21b048a2237b4f7c2709b, type: 3}
   - <Name>k__BackingField: Kellie Kirk
-    <Description>k__BackingField: Buisness woman, that cares about people
-    <Promise>k__BackingField: I will finally solve the float problem in this district
-    <RelatedNews>k__BackingField: Children are able to walk to the school again
+    <Description>k__BackingField: Yound medic
+    <Promise>k__BackingField: Have where to find a useful leafes
+    <RelatedNews>k__BackingField: Kellie help to gather some leaves with a healing
+      effect around here
+    <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: -1
+    <WaterAffectionLevel>k__BackingField: -1
+    <HealthAffectionLevel>k__BackingField: 3
+    <Image>k__BackingField: {fileID: 21300000, guid: 3043c30301cf86d499d5b1080e4f3de4, type: 3}
+  - <Name>k__BackingField: Sam Odonell
+    <Description>k__BackingField: Big man
+    <Promise>k__BackingField: It's hard to feed him, but it worth it
+    <RelatedNews>k__BackingField: Sam made some medicine from leaves and showed us
+      a new water source. He also ate like 5 grown men...
+    <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: -3
+    <WaterAffectionLevel>k__BackingField: 2
+    <HealthAffectionLevel>k__BackingField: 2
+    <Image>k__BackingField: {fileID: 21300000, guid: 145caa12509149847b0e5a406e1d0a7e, type: 3}
+  - <Name>k__BackingField: Lillie Berry
+    <Description>k__BackingField: What a wonderful name...
+    <Promise>k__BackingField: Can gather some berries
+    <RelatedNews>k__BackingField: She find a bush of delicious berries! Wait! They
+      are poisoned!
+    <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: 3
+    <WaterAffectionLevel>k__BackingField: 1
+    <HealthAffectionLevel>k__BackingField: -3
+    <Image>k__BackingField: {fileID: 21300000, guid: 389575d3916857a41b5e0f332662d372, type: 3}
+  - <Name>k__BackingField: Jerry
+    <Description>k__BackingField: Useless
+    <Promise>k__BackingField: Actually useless.
+    <RelatedNews>k__BackingField: He did nothing.
+    <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: 0
+    <WaterAffectionLevel>k__BackingField: 0
+    <HealthAffectionLevel>k__BackingField: 0
+    <Image>k__BackingField: {fileID: 21300000, guid: 6083455aaa9e9ee4c92393c86ef47fd3, type: 3}
+  - <Name>k__BackingField: Michael Scott
+    <Description>k__BackingField: Office man?
+    <Promise>k__BackingField: Loves to joke, hates to work
+    <RelatedNews>k__BackingField: "Do I need to be liked? Absolutely not. I like
+      to be liked. I enjoy being liked. I have to be liked. But it\u2019s not like
+      this compulsive need like my need to be praised."
+    <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: -1
+    <WaterAffectionLevel>k__BackingField: -1
+    <HealthAffectionLevel>k__BackingField: 4
+    <Image>k__BackingField: {fileID: 21300000, guid: b114b7d004872074782383f616327adb, type: 3}
+  - <Name>k__BackingField: Adriana Bruce
+    <Description>k__BackingField: The old woman
+    <Promise>k__BackingField: Knows, how to grow good plants
+    <RelatedNews>k__BackingField: She told and helped us to plant some seed, we should
+      get good food
+    <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: 2
+    <WaterAffectionLevel>k__BackingField: -2
+    <HealthAffectionLevel>k__BackingField: -1
+    <Image>k__BackingField: {fileID: 21300000, guid: f236ecbce9bf1ca4bab61a7615a2b3c0, type: 3}
+  - <Name>k__BackingField: Belinda Edwards
+    <Description>k__BackingField: Energetic trainer
+    <Promise>k__BackingField: Jump, jump, again she won again in catching up
+    <RelatedNews>k__BackingField: She made us us 110% of our energy. We feel like
+      we are stronger now
+    <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: -1
+    <WaterAffectionLevel>k__BackingField: -2
+    <HealthAffectionLevel>k__BackingField: 2
+    <Image>k__BackingField: {fileID: 21300000, guid: a08527b03ec76c04096f2fa42b8d82dd, type: 3}
+  - <Name>k__BackingField: Lester Goodman
+    <Description>k__BackingField: Old man
+    <Promise>k__BackingField: Always complains about live
+    <RelatedNews>k__BackingField: He just anoyed us. We didn't understand eachother
     <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
     <HungerAffectionLevel>k__BackingField: -2
-    <WaterAffectionLevel>k__BackingField: 2
-    <HealthAffectionLevel>k__BackingField: 1
-    <Image>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-  - <Name>k__BackingField: Sam Odonell
-    <Description>k__BackingField: A clerich from the church
-    <Promise>k__BackingField: As a religious person, I will manage all studies by
-      myself
-    <RelatedNews>k__BackingField: Bible replaces all the books in a study programm
+    <WaterAffectionLevel>k__BackingField: -2
+    <HealthAffectionLevel>k__BackingField: -2
+    <Image>k__BackingField: {fileID: 21300000, guid: 77262cb04a422d44daf1be29af5743ac, type: 3}
+  - <Name>k__BackingField: Devil duck
+    <Description>k__BackingField: How it ended up here?
+    <Promise>k__BackingField: Looks just like a stickman...
+    <RelatedNews>k__BackingField: Something strange happened yeasterday, but we dont
+      remember what
     <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-    <HungerAffectionLevel>k__BackingField: 3
-    <WaterAffectionLevel>k__BackingField: -1
-    <HealthAffectionLevel>k__BackingField: -1
-    <Image>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-  - <Name>k__BackingField: Terry Chang
-    <Description>k__BackingField: Just a scientist
-    <Promise>k__BackingField: Science should be available for everyone
-    <RelatedNews>k__BackingField: He actually just lecturing students?
-    <RelatedBackGround>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
-    <HungerAffectionLevel>k__BackingField: 3
-    <WaterAffectionLevel>k__BackingField: 3
-    <HealthAffectionLevel>k__BackingField: -3
-    <Image>k__BackingField: {fileID: 21300000, guid: c8963f2a3fbfc5646b2635450748ead9, type: 3}
+    <HungerAffectionLevel>k__BackingField: -5
+    <WaterAffectionLevel>k__BackingField: -5
+    <HealthAffectionLevel>k__BackingField: -5
+    <Image>k__BackingField: {fileID: 21300000, guid: b114b7d004872074782383f616327adb, type: 3}
