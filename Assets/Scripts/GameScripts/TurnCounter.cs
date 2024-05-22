@@ -9,6 +9,8 @@ public class TurnCounter : MonoBehaviour
 
     private int _currentTurn = 0;
 
+    public int CurrentTurn {  get => _currentTurn; }
+
     public void AddTurn()
     {
         _currentTurn++;
